@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: th.co.geniustree.internship.api.dataproviderapi:data-provider-api:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/th/co/geniustree/internship/api/dataproviderapi/data-provider-api/1.0-SNAPSHOT/data-provider-api-1.0-20180208.060448-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/th/co/geniustree/internship/api/dataproviderapi/data-provider-api/1.0-SNAPSHOT/data-provider-api-1.0-20180208.060448-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/th/co/geniustree/internship/api/dataproviderapi/data-provider-api/1.0-SNAPSHOT/data-provider-api-1.0-20180208.060448-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
