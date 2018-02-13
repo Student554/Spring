@@ -6,7 +6,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,7 +25,7 @@ public class MyContainer {
 
         // find only class that annotate with Service
         List<Class> sevicesClass = classes.stream()
-                .filter(e -> e.getDeclaredAnnotation(Service.class) != null)
+                .filter(e -> (e.getDeclaredAnnotation(Service.class) != null))
                 .collect(Collectors.toList());
 
         sevicesClass.stream().forEach(System.out::println);
@@ -47,23 +46,28 @@ public class MyContainer {
 
     private static void setUpAutoWire(Object instance, Map<String, List<Object>> serviceRegistry) {
 
-        Optional<Field> field = Stream.of(instance.getClass().getDeclaredFields())
+        List<Field> field = Stream.of(instance.getClass().getDeclaredFields())
                 .map(e -> {
                     e.setAccessible(true);
                     return e;
                 })
                 .filter(f -> f.getDeclaredAnnotation(AutoWired.class) != null)
-                .findAny();
-        if (field.isPresent()) {
+                .collect(Collectors.toList());
 
+        if (field.size() != 0) {
+            for (int i = 0; i < field.size(); i++) {
 
-            List<Object> objects = serviceRegistry.get(field.get().getType().getName());
-            try {
-                field.get().set(instance, objects.get(0));
-                System.out.println("----- Set instance -----");
-            } catch (IllegalAccessException e) {
-                new RuntimeException(e);
+                System.out.println(serviceRegistry.get(field.get(i).getType().getName()));
+
+                List<Object> objects = serviceRegistry.get(field.get(i).getType().getName());
+                try {
+                    field.get(i).set(instance, objects.get(0));
+                    System.out.println("----- Set instance -----");
+                } catch (IllegalAccessException e) {
+                    new RuntimeException(e);
+                }
             }
+
             System.out.println("--- Run test ---");
             run(instance);
         }

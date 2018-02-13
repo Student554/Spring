@@ -1,14 +1,16 @@
 package th.co.geniustree.internship.dataclient.provider;
-import th.co.geniustree.internship.api.dataproviderapi.DataProviderApi;
+
 import th.co.geniustree.internship.dataclient.xx.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class MyDataProvider implements DataProviderApi {
+public class MyDataIm implements MyData {
+
     @Override
     public List<String> dataProvider() {
-        return Arrays.asList("1","2","3");
+        return Arrays.asList("10", "11", "12");
     }
+
 }
