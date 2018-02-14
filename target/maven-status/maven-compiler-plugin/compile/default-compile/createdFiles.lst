@@ -1,5 +1,4 @@
-th/co/geniustree/internship/dataclient/xx/AutoWired.class
-th/co/geniustree/internship/dataclient/xx/Service.class
-th/co/geniustree/internship/dataclient/xx/MyContainer.class
-th/co/geniustree/internship/dataclient/provider/MyDataProvider.class
+th/co/geniustree/internship/dataclient/MyDataProvider.class
 th/co/geniustree/internship/dataclient/DataClient.class
+th/co/geniustree/internship/dataclient/MyDataProvider2.class
+th/co/geniustree/internship/dataclient/MyDataProvider1.class

@@ -1,10 +1,8 @@
 package th.co.geniustree.internship.dataclient;
 
 import th.co.geniustree.internship.api.dataproviderapi.DataProviderApi;
-import th.co.geniustree.internship.dataclient.provider.MyDataProvider;
-import th.co.geniustree.internship.dataclient.provider.MyDataProvider1;
-import th.co.geniustree.internship.dataclient.xx.AutoWired;
-import th.co.geniustree.internship.dataclient.xx.Service;
+import th.co.geniustree.internship.faris.microioc.container.AutoWired;
+import th.co.geniustree.internship.faris.microioc.container.Service;
 
 @Service
 public class DataClient {
@@ -17,7 +15,7 @@ public class DataClient {
     @AutoWired
     private DataProviderApi dataProviderApi2;
 
-    public void test() {
+    public void microioc() {
 
         System.out.println(dataProviderApi.dataProvider());
         System.out.println(dataProviderApi1.dataProvider());

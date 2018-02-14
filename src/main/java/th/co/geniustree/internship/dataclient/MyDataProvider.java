@@ -1,6 +1,6 @@
-package th.co.geniustree.internship.dataclient.provider;
+package th.co.geniustree.internship.dataclient;
 import th.co.geniustree.internship.api.dataproviderapi.DataProviderApi;
-import th.co.geniustree.internship.dataclient.xx.Service;
+import th.co.geniustree.internship.faris.microioc.container.Service;
 
 import java.util.Arrays;
 import java.util.List;
